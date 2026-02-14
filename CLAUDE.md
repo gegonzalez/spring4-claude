@@ -37,9 +37,19 @@ Auto-format code with ktlint:
 
 ## Testing
 
-Run all tests:
+Run all tests (including integration tests):
 ```bash
 ./gradlew test
+```
+
+Run only unit tests from main module:
+```bash
+./gradlew :test
+```
+
+Run only integration/acceptance tests:
+```bash
+./gradlew :integrationTests:test
 ```
 
 Run tests with verbose output:
@@ -63,6 +73,7 @@ Run a single test method:
 - **Main entry point**: `src/main/kotlin/Main.kt`
 - **JVM Target**: Java 21
 - **Test Framework**: JUnit Platform (configured via `useJUnitPlatform()`)
+- **Integration Tests**: Separate `integrationTests` module for acceptance tests
 
 ## Development Practices
 
@@ -70,6 +81,11 @@ Run a single test method:
 - Follow clean code principles: meaningful names, small functions, single responsibility
 - Apply SOLID principles when designing classes and modules
 - Practice Test-Driven Development (TDD): write tests before implementation
+
+### Naming Conventions
+- **Modules**: camelCase (e.g., `integrationTests`)
+- **Classes**: PascalCase (e.g., `SampleAcceptanceTest`)
+- **Functions/Variables**: camelCase (e.g., `getUserName`)
 
 ### Testing Strategy
 - **End-to-End Tests**: Write comprehensive E2E tests covering happy path scenarios
