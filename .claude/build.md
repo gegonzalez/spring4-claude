@@ -17,7 +17,7 @@ Build executable JAR:
 
 Run the JAR:
 ```bash
-java -jar build/libs/untitled2-1.0-SNAPSHOT.jar
+java -jar build/libs/spring4-claude-1.0-SNAPSHOT.jar
 ```
 
 Clean build artifacts:
